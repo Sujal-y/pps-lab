@@ -2,7 +2,8 @@
 #include <stdio.h>
 int main() {
    int n,temp,rev=0;
-   n = 010; // number to check
+   printf("enter the number");
+   scanf("%d",&n);
    temp = n;
    while(temp>0)
    {
