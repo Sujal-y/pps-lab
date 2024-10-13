@@ -3,7 +3,7 @@
 int checkprime(int num) 
 {
     int is_prime = 1;
-    for(int i = 2;i<num/2;i++)
+    for(int i = 2;i<=num/2;i++)
     {
         if(num%i == 0) is_prime =0;
     }
@@ -19,7 +19,7 @@ int main() {
     {
         if(checkprime(num) == 1){
             printf("%d\n",num);
-        };
+        }
         num++;
     }
 
