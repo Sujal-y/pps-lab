@@ -1,6 +1,6 @@
 //generatre prime numbers between 2 limitss
 #include <stdio.h>
-int checkprime(int num) 
+int checkprime(int num) //returns 1 if prime and 0 if not prime
 {
     int is_prime = 1;
     for(int i = 2;i<=num/2;i++)
@@ -10,7 +10,7 @@ int checkprime(int num)
     return is_prime;
 }
 int main() {
-    int ubound,lbound;
+    int ubound,lbound;//upper and lower limits
     printf("enter lower and upper limit \n");
     scanf("%d%d",&lbound,&ubound);
     printf("the prime numbers are \n");
