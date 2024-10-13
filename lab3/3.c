@@ -2,15 +2,15 @@
 #include <stdio.h>
 #include <math.h>
 int main() {
-    int num,num1,sum = 0,temp;
+    int num,temp,sum = 0,digit;
     printf("enter number \n");
     scanf("%d",&num);
-    num1 = num;
-    while(num1!=0)
+    temp = num;
+    while(temp!=0)
     {
-        temp = num1%10;
-        sum = sum + pow(temp,3);
-        num1 = num1/10;
+        digit = temp%10;
+        sum = sum + pow(digit,3);
+        temp = temp/10;
     }
    
     if(sum == num) printf("armstrong number!!");
