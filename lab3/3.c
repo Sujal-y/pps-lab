@@ -1,4 +1,4 @@
-//check if sum of cubes of all digits of a number = the number itself
+//check if sum of cubes of all digits of a number = the number itself armstrong mumber
 #include <stdio.h>
 #include <math.h>
 int main() {
@@ -8,7 +8,7 @@ int main() {
     temp = num;
     while(temp!=0)
     {
-        digit = temp%10;
+        digit = temp%10; // single digit
         sum = sum + pow(digit,3);
         temp = temp/10;
     }
