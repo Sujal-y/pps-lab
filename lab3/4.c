@@ -3,7 +3,7 @@
 int checkprime(int num) 
 {
     int is_prime = 1;
-    for(int i = 2;i<num/2;i++)
+    for(int i = 2;i<=num/2;i++)
     {
         if(num%i == 0) is_prime =0;
     }
@@ -15,7 +15,7 @@ int main() {
     {
         printf("enter a number \n");
         scanf("%d",&num);
-        if(checkprime) primes++;
+        if(checkprime(num)) primes++;
         else composites++;
 
     } while (num != -1);
