@@ -21,7 +21,7 @@ int main() {
     } while (num != -1);
     
     printf("primes = %d \n",primes);
-    printf("composites = %d",composites);
+    printf("composites = %d\n",composites);
     
    return 0;
 }
