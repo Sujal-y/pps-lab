@@ -18,7 +18,7 @@ int main()
 float n; float x;
 printf ("Enter values of x & n: \n");
 scanf ("%f%f", &x, &n) ; //input
-x=x*pi/180.0;//degree tO radians
+x=x*pi/180.0;//degree to radians
 float tempn =1.00;
 float sum =0;
 float inverter=1;
@@ -29,5 +29,5 @@ for (int i=1; i<=n; i++) {
 }
 printf ("sum of series is = %f\n", sum);
 printf ("sin(%f) = %f\n",(x*180/pi), sin(x));
-
+return 0;
 }
