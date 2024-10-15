@@ -21,4 +21,3 @@ Additional Exercise
 1. Find out the generic root of any number. 
 [Hint: Generic root is the sum of digits of a number until a single digit is obtained.] Ex: Generic root of 456 is 4 + 5 + 6 = 15 = 1+5 = 6
 2.Write a program to demonstrate use of break and continue statements in for loop. 
- 
