@@ -9,7 +9,7 @@ printf ("Enter element \n");
 scanf("%d",&ele);
 for(int i =0;i<ele;i++)
 {
-    if (ele%i == 0){
+    if (ele%i == 0){//if i is a divisor then it gets added to sum
         sum +=i;
     }
 }
