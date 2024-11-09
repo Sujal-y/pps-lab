@@ -7,7 +7,7 @@ int main()
 int ele,sum=0;
 printf ("Enter element \n");
 scanf("%d",&ele);
-for(int i =0;i<ele;i++)
+for(int i =1;i<ele;i++)
 {
     if (ele%i == 0){//if i is a divisor then it gets added to sum
         sum +=i;
@@ -21,7 +21,5 @@ else
 {
     printf ("not a perfect number :< \n");
 }
-
-
 return 0;
 }
