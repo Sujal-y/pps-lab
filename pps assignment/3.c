@@ -1,38 +1,42 @@
 #include <stdio.h>
-
-int main() {
-    int n, p;
-
-    // Input the dimension of the matrix
-    scanf("%d", &n);
-
-    int arr[n][n];
-
-    // Input the matrix elements in row-major order
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%d", &arr[i][j]);
-        }
+#include <stdlib.h>
+#include <string.h>
+int search(int arr[],int ele,int n){
+    int pos=-1;
+    for(int i =0;i<n;i++){
+        if (ele==arr[i]) pos=i;
+    }
+    return pos;
+}
+void reverse(int arr[],int newarr[],int n, int k){
+    int i,j;
+    for(i =n-k,j=0;i<n;i++,j++){
+        newarr[j]=arr[i];
+    }
+    for(i=0,j=k;i<n;i++,j++){
+        newarr[j]=arr[i];
     }
 
-    // Input the position p
-    scanf("%d", &p);
+}
+int main(){
+    int n,arr[105],k,t;
 
-    // Convert the position p to 0-based index
-    int index = p - 1;
+    scanf("%d",&n); //number of elements
+    for(int i = 0;i<n;i++){
+        scanf("%d",&arr[i]);//array input
+    }
+    scanf("%d",&k); //pivot index to rotate the array
+    scanf("%d",&t); //target element to be searched
 
-    // Determine the row and column based on the serpentine order
-    int row = index / n;       // Row index
-    int col = index % n;       // Column index
+    int newarr[n];
+    reverse(arr,newarr,n,k);//
 
-    // Adjust column index for odd rows (reverse direction)
-    if (row % 2 == 1) {
-        col = n - 1 - col;
+    for(int i =0;i<n;i++){
+        printf("%d ",newarr[i]);
     }
 
-    // Output the result
-    printf("%d %d %d\n", row, col, arr[row][col]);
-
+    printf("\n");
+    printf("%d\n ",search(newarr,t,n));
+    printf("\n");
     return 0;
 }
-
