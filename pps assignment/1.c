@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 
 void bubbleSort(int arr[], int size) {
     for (int i = 0; i < size - 1; i++) {
@@ -27,6 +28,12 @@ int main() {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             scanf("%d", &arr[i][j]);
+            if (arr[i][j]>1000||arr[i][j]<1)
+            {
+                printf("input out of range\n");
+                exit(0);
+            }
+            
             temparr[nele]+=arr[i][j];
             nele++;
         }
@@ -40,7 +47,7 @@ int main() {
     bubbleSort(temparr,nele);
     int ele = temparr[p-1];
 
-
+    //finding the indices
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             if(ele == arr[i][j]){
