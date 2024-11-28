@@ -1,38 +1,55 @@
 #include <stdio.h>
 
-int main() {
-    int n, p;
+void bubbleSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap arr[j] and arr[j+1]
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
 
+int main() {
+    int n, p,row,col;
+    int temparr[100],nele=0;
+
+    printf("Enter the dimension:- ");
     // Input the dimension of the matrix
     scanf("%d", &n);
 
     int arr[n][n];
-
+    printf("Enter the elements:- \n");
     // Input the matrix elements in row-major order
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             scanf("%d", &arr[i][j]);
+            temparr[nele]+=arr[i][j];
+            nele++;
         }
     }
 
     // Input the position p
-    scanf("%d", &p);
+    printf("Enter the p:- ");
+    scanf("%d", &p);   // p-1 -> loction index in 1d array
 
-    // Convert the position p to 0-based index
-    int index = p - 1;
+    //sorting
+    bubbleSort(temparr,nele);
+    int ele = temparr[p-1];
 
-    // Determine the row and column based on the serpentine order
-    int row = index / n;       // Row index
-    int col = index % n;       // Column index
 
-    // Adjust column index for odd rows (reverse direction)
-    if (row % 2 == 1) {
-        col = n - 1 - col;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if(ele == arr[i][j]){
+                row = i;
+                col = j;
+            };
+        }
     }
 
-    // Output the result
     printf("%d %d %d\n", row, col, arr[row][col]);
-
     return 0;
 }
-
