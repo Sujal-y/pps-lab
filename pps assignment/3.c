@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
 int search(int arr[],int ele,int n){
     int pos=-1;
     for(int i =0;i<n;i++){
@@ -27,6 +27,17 @@ int main(){
     }
     scanf("%d",&k); //pivot index to rotate the array
     scanf("%d",&t); //target element to be searched
+
+    for(int i = 0;i<n;i++){
+        if(-231 >=arr[i]||arr[i] >= 230){
+        printf("-1p");
+        exit(0);
+    }
+    }
+    if(n<=1||n>=105||0>=k||k>=n||-231>=t||t>=230){
+        printf("-1q");
+        exit(0);
+    }
 
     int newarr[n];
     reverse(arr,newarr,n,k);//
