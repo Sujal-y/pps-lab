@@ -15,9 +15,13 @@ int checkselfdiving(int num){
 
 }
 int main() {
-   int n;
-   printf("enter the number:- ");
-   scanf("%d",&n);
-   printf("%d\n",checkselfdiving(n));
+   int ub,lb;
+   printf("enter left and right ");
+   scanf("%d%d",&lb,&ub);
+   printf("\n[");
+   for(int i =lb;i<=ub;i++){
+    if(checkselfdiving(i)) printf("%d,",i);
+    }
+   printf("]\n");
    return 0;
 }
