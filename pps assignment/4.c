@@ -1,38 +1,23 @@
-#include <stdio.h>
-
-int main() {
-    int n, p;
-
-    // Input the dimension of the matrix
-    scanf("%d", &n);
-
-    int arr[n][n];
-
-    // Input the matrix elements in row-major order
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            scanf("%d", &arr[i][j]);
-        }
+// A self-dividing number is a number that is divisible by every digit it contains.
+// For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
+// A self-dividing number is not allowed to contain the digit zero.
+// Given two integers left and right, return a list of all the self-dividing numbers in the range [left, right]
+#include<stdio.h>
+int checkselfdiving(int num){
+    int istrue = 1;
+    int temp,permnum=num;
+    while(num>0){
+        temp=num%10;
+        if(permnum%temp != 0)istrue=0;
+        num/=10;
     }
+    return istrue;
 
-    // Input the position p
-    scanf("%d", &p);
-
-    // Convert the position p to 0-based index
-    int index = p - 1;
-
-    // Determine the row and column based on the serpentine order
-    int row = index / n;       // Row index
-    int col = index % n;       // Column index
-
-    // Adjust column index for odd rows (reverse direction)
-    if (row % 2 == 1) {
-        col = n - 1 - col;
-    }
-
-    // Output the result
-    printf("%d %d %d\n", row, col, arr[row][col]);
-
-    return 0;
 }
-
+int main() {
+   int n;
+   printf("enter the number:- ");
+   scanf("%d",&n);
+   printf("%d\n",checkselfdiving(n));
+   return 0;
+}
