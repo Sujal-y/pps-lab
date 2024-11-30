@@ -44,7 +44,7 @@ int main() {
             // Print the Fibonacci series
             printFibonacci(n);
         }
-        n--;
+        ninputs--;
     }
     return 0;
 }

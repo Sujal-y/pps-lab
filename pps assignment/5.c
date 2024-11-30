@@ -16,14 +16,10 @@ int main() {
     char input[100], output[100];
     printf("Enter an alphanumeric string: ");
     fgets(input, sizeof(input), stdin);
-
-    // Remove the trailing newline character if present
     input[strcspn(input, "\n")] = '\0';
-
-    // Extract digits
+  
     extractDigits(input, output);
 
-    // Print the result
     printf("Extracted digits: %s\n", output);
 
     return 0;
