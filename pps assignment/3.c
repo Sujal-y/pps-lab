@@ -20,10 +20,11 @@ void reverse(int arr[],int newarr[],int n, int k){
 }
 int main(){
     int n,arr[105],k,t;
-    printf("NAME:- SUJAL Y /n ");
+    printf("NAME:- Sujal Y\n");
     printf("REGISTRATION NUMBER:- 245805200 \n");
-
-    scanf("%d",&n); //number of elements
+    printf("Section :- B\n");
+    
+    scanf("%d",&n); //number of elements    
     for(int i = 0;i<n;i++){
         scanf("%d",&arr[i]);//array input
     }
@@ -44,7 +45,6 @@ int main(){
         printf("-1");
         exit(0);
     }
-
     int newarr[n];
     reverse(arr,newarr,n,k);
 

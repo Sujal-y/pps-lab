@@ -14,7 +14,11 @@ void extractDigits(const char *input, char *output) {
 
 int main() {
     char input[100], output[100];
-    printf("Enter an alphanumeric string: ");
+    printf("NAME:- Sujal Y\n");
+    printf("REGISTRATION NUMBER:- 245805200 \n");
+    printf("Section :- B\n");
+
+ printf("Enter an alphanumeric string: ");
     fgets(input, sizeof(input), stdin);
     input[strcspn(input, "\n")] = '\0';
   

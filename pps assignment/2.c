@@ -27,6 +27,11 @@ int main() {
     char input[100];
     char command;
     int m, n;
+    printf("NAME:- Sujal Y\n");
+    printf("REGISTRATION NUMBER:- 245805200 \n");
+    printf("Section :- B\n");
+
+    
     scanf("%d",&ninputs);
     ninputs++;
     while(ninputs>0){
