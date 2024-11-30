@@ -28,6 +28,7 @@ int main() {
     char command;
     int m, n;
     scanf("%d",&ninputs);
+    ninputs++;
     while(ninputs>0){
         fgets(input, sizeof(input), stdin);
         if (sscanf(input, "G %d %d", &m, &n) == 2) {// Checks if the input starts with 'G'
@@ -44,7 +45,7 @@ int main() {
             // Print the Fibonacci series
             printFibonacci(n);
         }
-        ninputs--;
+        ninputs=ninputs-1;
     }
     return 0;
 }
