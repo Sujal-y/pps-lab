@@ -17,6 +17,8 @@ void bubbleSort(int arr[], int size) {
 int main() {
     int n, p,row,col;
     int temparr[100],nele=0;
+    printf("NAME:- SUJAL Y /n ");
+    printf("REGISTRATION NUMBER:- 245805200 ");
 
     printf("Enter the dimension:- ");
     // Input the dimension of the matrix
