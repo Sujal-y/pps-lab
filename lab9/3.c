@@ -1,3 +1,6 @@
+//Define a structure to store student details (e.g., name, roll number, marks in three
+// subjects). Write a program to input data for five students, calculate their total and
+// average marks, and display the results.
 #include<stdio.h>
 struct student_details
 {

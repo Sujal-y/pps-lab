@@ -1,5 +1,4 @@
 Lab Exercise 
-With the knowledge of 1D arrays, write C programs to do the following: 
 With the knowledge of 2D arrays, write C programs to do the following:
 1. Check whether the matrix is symmetric or not
 2. Compute and display the trace and norm of a given square matrix.
