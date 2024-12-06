@@ -8,7 +8,6 @@ int symmetric(int a[][10],int row,int col){
             if(a[i][j]!=a[j][i])issymmetric=0;
         }
     }
-
     return issymmetric;
 }
 void matrix2dentry(int a[][10],int row,int col){
