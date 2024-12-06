@@ -1,4 +1,4 @@
-//regula falsi method
+//bisection method
 #include<stdio.h>
 #include<math.h>
 float round_off(float value) {
@@ -9,15 +9,15 @@ float func(float x,float c4,float c3,float c2,float c1,float c0){
     return round_off(result);
 }
 float x(float a,float b,float c4,float c3,float c2,float c1,float c0){
-    float result = (a*func(b,c4,c3,c2,c1,c0)-b*func(a,c4,c3,c2,c1,c0))/(func(b,c4,c3,c2,c1,c0)-func(a,c4,c3,c2,c1,c0));
+    float result = (a+b)/2;
     return round_off(result);
 }
 int main(){
-    float c4,c3,c2,c1,c0,ntimes;
+    float c4,c3,c2,c1,c0;
     printf("write the coefficients of the polynomial\n");
     printf("x^4+x^3+x^2+x^1+x^0 ");
     scanf("%f%f%f%f%f",&c4,&c3,&c2,&c1,&c0);
-    float a,b,i=0;
+    float a,b,i=0,ntimes;
     printf("enter the interval\n");
     scanf("%f%f",&a,&b);
     printf("How many iterations:- ");
