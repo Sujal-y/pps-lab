@@ -15,4 +15,3 @@ int main() {
     printf("value of pointer variable after subtraction = %d\n",*ptr);
     return 0;
 }
-

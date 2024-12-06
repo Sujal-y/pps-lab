@@ -7,7 +7,7 @@ void interchange(int row,int col,int a[][col],int r1,int r2){
         a[r2][i]=temp;
     }
 }
-void matrix2dentry(int row,int col,int a[][col]){
+void matrix2dentry(int row,int col,int a[][10]){
     for(int i=0;i<row;i++){
         for(int j =0;j<col;j++){
             scanf("%d",&a[i][j]);
@@ -29,10 +29,10 @@ int main(){
     printf("enter the elements;-\n");
     int arr[n][m];
     matrix2dentry(n,m,arr);
-    printf("enter rows indices to be switched\n");
-    scanf("%d%d",&r1,&r2);
     
-    interchange(n,m,arr,r1,r2);
+    int *p;
+    p= arr;
+    interchange(n,m,arr,1,0);
     
     printf("resultant matrix\n");
     

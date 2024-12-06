@@ -2,7 +2,7 @@
 #include<stdlib.h>
 int ConnerSum(int row,int col){
     int a[row][col];
-    printf("\nenter the elements of the matrix");
+    printf("\nenter the elements of the matrix\n");
     for(int i=0;i<row;i++){
         for(int j =0;j<row;j++){
             scanf("%d",&a[i][j]);
