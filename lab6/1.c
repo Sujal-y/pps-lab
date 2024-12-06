@@ -17,7 +17,6 @@ void matrix2dentry(int a[][10],int row,int col){
             scanf("%d",&a[i][j]);
         }
     }
-
 }
 int main(){
     int n,m;
@@ -26,7 +25,7 @@ int main(){
     printf("enter the elements\n");
     int arr[n][n];
     matrix2dentry(arr,n,n);//matrix entry
-    if(symmetric(arr,n,n))printf("\n matrix is symmentric\n");
+    if(symmetric(arr,n,n))printf("\nmatrix is symmentric\n");
     else printf("\nnot symmetric\n");
     return 0;
 }

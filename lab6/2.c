@@ -27,7 +27,6 @@ int norm(int arr[][10], int row, int col){
             sum+=pow((arr[i][j]),2);
         }
     }
-    printf("%d sum",sum);
     norm=sqrt(sum);
     return norm;
 }
