@@ -17,20 +17,23 @@ int main(){
 clock_t begin = clock();
 
 
-    int a[10]={8,5,3,53,21,75,2,7,29,4};
+    int n=200;
+    int a[n];
+    for (int i = 0; i<n; i++) {
+            a[i]=i;
+            
+        
+    }
     
 
 
-    bubblesort(a, 10, 'a');
+    bubblesort(a, n, 'd');
     printf("\nArray sorted in ascending order:\n");
     
-    for(int i = 0; i < 10; i++) {
-        printf("%d ", a[i]);
-    }
-    printf("\n");
+    
 
 clock_t end = clock();
 double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-printf("\ntime spent:- %f",time_spent);
+printf("\ntime spent:- %f\n",time_spent);
 return 0;
 }
