@@ -7,17 +7,23 @@
 int main(){
     char input[100],word[100],result[100];
     printf("enter the input:- ");
-    scanf("%[^\n]s",input);
+    fgets(input,100,stdin);
     printf("enter the word to be deleted:- ");
-    scanf("%[^\n]s",word);
+    fgets(word,100,stdin);
     for(int i=0;i<strlen(input);i++){
         if(input[i]=='\n')input[i]='\0';
     }
+    for(int i=0;i<strlen(word);i++){
+        if(word[i]=='\n')input[i]='\0';
+    }
+
     int length = strlen(word)-1;
-    for(int i=0;i<length;i++){
+    int count=0;
+    for(int i=0;i<strlen(input);i++){
 
     }
 
+    printf("output:- %s\n",input);
 
-
+    return 0;
 }
