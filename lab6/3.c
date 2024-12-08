@@ -1,7 +1,6 @@
 //Perform matrix multiplication and display the resultant matrix.
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
 void matrix2dentry(int row,int col,int a[row][col]){
     for(int i=0;i<row;i++){
         for(int j =0;j<col;j++){
@@ -18,7 +17,7 @@ void display2dmatrix(int row,int col,int a[row][col]){
     }
 }
 int main(){
-    clock_t begin = clock();
+    
     int n1,m1,n2,m2,r1,r2;
     printf("enter the size n1Xm1\n");
     scanf("%d%d",&n1,&m1);
@@ -52,10 +51,5 @@ int main(){
 
     printf("resultant matrix\n");
     display2dmatrix(n1,m2,arr3);
-
-    clock_t end = clock();
-    double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
-    printf("\ntime spent:- %f\n",time_spent);
-    
     return 0;
 }
