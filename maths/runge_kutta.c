@@ -5,7 +5,7 @@ float round_off(float value) {
     return roundf(value * 10000) / 10000;}
 
 float func(float x,float y){
-    float result = x+pow(y,2);//equation to be solved
+    float result = pow(x,2)+pow(y,2);//equation to be solved
     return round_off(result);
 }
 
